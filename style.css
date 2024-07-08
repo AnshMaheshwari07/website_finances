@@ -1,8 +1,11 @@
+*{
+    box-sizing: border-box;
+}
 body{
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
-
+    overflow-x: hidden;
 }
 
 .dash{
@@ -15,6 +18,7 @@ body{
 .nav-item{
     position: relative;
 }
+
 .x{
     padding: 10px 20px;
     background-color: aquamarine;
@@ -26,20 +30,22 @@ body{
     position: relative;
     text-decoration: none;
 }
-.x:hover::after{
-    width: 40%;
-    color: blue;
-}
+
+
 .x::after{
     content: '';
-    position: absolute;
+    position: absolute; 
     left: 0;
-    bottom: 0;
+    bottom: 0;  
     width: 0;
     height: 2px;
     
     background-color: blue;
     transition: width 0.3s ease;
+}
+.x:hover::after,
+.x.active::after {
+    width: 40%;
 }
 .x:hover{
     color: black;
@@ -73,4 +79,100 @@ body{
 }
 .nav-item:hover .dropdown{
     display: block;
+}
+main{
+    margin-top: 80px;
+    position: relative;
+}
+.about{
+    display: flex;
+    justify-content: space-between; /* Distributes space between left and right sections */
+    align-items: center;
+    height: 90vh;
+    padding: 0 120px;
+    background-color: aliceblue;  
+    
+}
+.left{
+    flex: 1; /* Makes left section take up available space */
+    margin-top: -20px; /* Adjust this value as needed to shift the section up */
+    max-width: 50%;
+}
+.heading{
+    font-size: 60px;
+    margin-bottom: 100px;
+
+}
+.content{
+    font-size: 20px;
+    font-style: italic;
+}
+.picture{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Adjust the margin as needed */
+}
+.para{
+    font-size: 20px;
+    text-align: center; /* Optional: adjust as needed */
+    margin-top: 400px;
+}
+.photo {
+    background-image: url('photo.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    width: 400px; /* Adjust the width as needed */
+    height: 350px; /* Adjust the height as needed */
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}
+.firm{
+    width: 100vw;
+    height: 70vh;
+}
+.hd1{
+    padding-left: 100px;
+    font-size: 50px;
+}
+.hd2{
+    padding-left: 100px;
+}
+.hd3{
+    padding-left: 100px;
+
+}
+.mission{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 100px;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+.left{
+    flex: 1;
+    margin-left: 100px;
+}
+.right{
+    flex: 1;
+}
+.vision{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 100px;
+    gap: 50px;
+    margin-bottom: 100px;
+    margin-top: 60px;
+}
+.imgg{
+    max-width: 100%;
+    height: auto;
 }
