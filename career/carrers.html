@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit and Assurance</title>
+    <link rel="stylesheet" href="/What_we_do/style1.css">
+</head>
+<body>
+    <header class="dash">
+        <div class="dash1">
+            agency
+        </div>
+        <nav class="dash2">
+            <div class="nav-item"><a href="../index.html"><button class="x">Home</button></a></div>
+            <div class="nav-item">
+                <button class="x">Who We Are</button>
+                <div class="dropdown">
+                    <a href="Firm.html">The Firm </a>
+                    <a href="manage.html">The Management Team</a>
+                </div>
+            </div>
+           
+            <div class="nav-item">
+                <button class="x">What We Do</button>
+                <div class="dropdown">
+                    <a href="audit.html">Audit & Assurance</a>
+                    <a href="risk_advisory.html">Risk Advisory Services</a>
+                    <a href="taxation.html">Tax Advisory Services</a>
+                    <a href="transaction.html">Transaction Advisory Services</a>
+                    <a href="Management_advisort.html">Management Advisory Services</a>
+                    <a href="financial.html">Financial Advisory Services</a>
+                    <a href="overseas.html">Overseas Operations</a>
+                    <a href="fundraising.html">Fundraising Support</a>
+
+                </div>
+            </div>
+            <div class="nav-item">
+                <button class="x">Who We Serve</button>
+                
+            </div>
+            <div class="nav-item">
+                <button class="x">Careers</button>
+                
+            </div>
+            <div class="nav-item">
+                <button class="x">Lets Connect</button>
+                
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="firm">
+            <h3 class="hd2">HOME</h3>
+        
+        <h1 class="hd1">Fundraising Support
+
+        </h1>
+        <div class="line"></div>
+       
+        </div>
+        
+            <div class="cont">
+
+                <br>
+                <h1 class="join">Join Our Passionate Team</h1>
+                <div class="line1"></div>
+            </div>  
+            <div class="paraa">
+            
+                <div class="left_imgg_side">
+                    <form onsubmit="sendemail(); reset(); return false;">
+                        <h3 class="input_txt">Position</h3>
+                        <select name="postion" id="position">
+                            <option value="">Select Position</option>
+                            <option value="">Audit Associate</option>
+                            <option value="">Tax Associate</option>
+                            <option value="">Tax Manager</option>
+                            <option value="">Audit Manager</option>
+                            <option value="">Human Resources Professional</option>
+                            <option value="">Article Assistant</option>
+                    
+                    
+                        </select>
+                        <h3 class="input_txt">Name</h3>
+                        <input id="name" type="text" placeholder="Name" required>
+                        <h3 class="input_txt">Email</h3>
+                        <input id="email" type="email" placeholder="Email" required>
+                    
+                        <h3 class="input_txt">Phone No.</h3>
+                        <input id="number" type="number" placeholder="Phone number" required>
+                    
+                        <h3 class="input_txt">Message(optional)</h3>
+                        <textarea id="msg" name="message"></textarea>
+                    
+                        <button class="submit" type="submit">SUBMIT</button>
+                    </form>
+            </div>
+                <div class="right_side">
+                    At Talati & Talati LLP, you can find challenging opportunities in an
+                     environment that recognizes and rewards exceptional performance. We seek
+                      experienced individuals capable of delivering a wide range of value added
+                       services to our high profile clients, helping them to confront today’s 
+                       critical issues head on. We are always on the look-out to recruit exceptional
+                        people. Integrity and Ethics are very important for us. Not only do we 
+                        expect you to have these qualities but we expect you to expect the same 
+                        from us. We strive to create an environment which strongly facilitates an
+                         ethos of innovation, collaboration and implementation. The performance 
+                         management system ensures that people are constantly strengthening their 
+                         learning curve and sharing it with their peers. We reconcile an 
+                         uncompromising focus on excellence with genuine care and guidance.
+                          We believe in challenging and exciting young minds.
+
+    
+               
+           
+            </div>
+        </div>
+            
+    
+        
+    </main>
+    
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendemail(){
+        Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "anshmaheshwari47@gmail.com",
+        Password : "2396583200FDA44512F296E787C6CF48BDB8",
+        To : '22ucs022@lnmiit.ac.in',
+        From : "anshmaheshwari47@gmail.com",
+        ReplyTo: document.getElementById('email'),
+        Subject : "Form Enquiry of"+ document.getElementById('name'),
+        Body : "Name:"+ document.getElementById('name').value + "<br> Email: "+ document.getElementById('email').value
+        + "<br>Contact Number : " + document.getElementById('number') +  "<br>Position :" + document.getElementById('position') +
+        "<br>Message : " +document.getElementById('msg')
+        
+        }).then(
+            message => alert(message)
+);
+
+        }
+    </script>
+</body>
+</html>
